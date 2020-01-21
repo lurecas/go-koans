@@ -1,5 +1,7 @@
 package go_koans
 
+import "fmt"
+
 func aboutArrays() {
 	fruits := [4]string{"apple", "orange", "mango"}
 
@@ -11,12 +13,12 @@ func aboutArrays() {
 	assert(len(fruits) == 4) // the length is what the length is
 	assert(cap(fruits) == 4) // it can hold no more
 
-	assert(fruits == [4]string{}) // comparing arrays is not like comparing apples and oranges
+	assert(fruits == [4]string{"apple", "orange", "mango"}) // comparing arrays is not like comparing apples and oranges
 
-	tasty_fruits := fruits[1:3]         // defining oneself as a variation of another
-	assert(fmt.Sprintf("%T", tasty_fruits) == __string__) //and get not a simple array as a result
-	assert(tasty_fruits[0] == "orange") // slices of arrays share some data
-	assert(tasty_fruits[1] == "mango")  // albeit slightly askewed
+	tasty_fruits := fruits[1:3]                           // defining oneself as a variation of another
+	assert(fmt.Sprintf("%T", tasty_fruits) == "[]string") //and get not a simple array as a result
+	assert(tasty_fruits[0] == "orange")                   // slices of arrays share some data
+	assert(tasty_fruits[1] == "mango")                    // albeit slightly askewed
 
 	assert(len(tasty_fruits) == 2) // its length is manifest
 	assert(cap(tasty_fruits) == 3) // but its capacity is surprising!
