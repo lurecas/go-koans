@@ -1,7 +1,5 @@
 package go_koans
 
-import "fmt"
-
 func aboutArrays() {
 	fruits := [4]string{"apple", "orange", "mango"}
 
@@ -20,7 +18,6 @@ func aboutArrays() {
 	assert(tasty_fruits[1] == "mango")  // albeit slightly askewed
 
 	assert(len(tasty_fruits) == 2) // its length is manifest
-	fmt.Printf("%d", cap(tasty_fruits))
 	assert(cap(tasty_fruits) == 3) // but its capacity is surprising!
 
 	tasty_fruits[0] = "lemon" // are their shared roots truly identical?
